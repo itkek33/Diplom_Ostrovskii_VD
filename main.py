@@ -384,4 +384,9 @@ if __name__ == "__main__":
 
 
 #вечная работа бота
-bot.polling(non_stop=True)
+while True:
+    try:
+        bot.polling(non_stop=True)
+    except Exception as e:
+        print(f"Ошибка в polling: {e}")
+        time.sleep(5) 
