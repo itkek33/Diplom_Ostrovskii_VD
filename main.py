@@ -179,7 +179,7 @@ def online_update_func():
         #форматирование этой переменной
         now_str = str(f"{now.tm_hour}:{now.tm_min}:{now.tm_sec}")
         #проверка есть ли время в данный момент в таблице с временами
-        if str(now_str) in  str(mas_time_rass):
+        if str(now_str) in  (mas_time_rass):
             #соеденение с базой данных
             conn = sqlite3.connect(r'database.db')
             cur = conn.cursor()
@@ -213,7 +213,7 @@ def online_update_func_prepod():
         #форматирование этой переменной
         now_str = str(f"{now.tm_hour}:{now.tm_min}:{now.tm_sec}")
         #проверка есть ли время в данный момент в таблице с временами
-        if str(now_str) in  str(mas_time_rass):
+        if str(now_str) in  (mas_time_rass):
             #соеденение с базой данных
             conn = sqlite3.connect(r'database.db')
             cur = conn.cursor()
